@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yyp.springBoot</groupId>
+    <artifactId>springBoot-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springBoot-helloWorld</module>
+    </modules>
+    <!--设置spring boot的父模块
+        父模块中包含springboot项目中默认的以及一些基础的jar
+        其中依赖的父模块
+        <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.4.4</version>
+      </parent>
+      负责进行版本控制，这样就帮我门解决了版本冲突以及多个框架之间不同版本进行对应的难题
+      后边引入的starter不用关心版本号即可
+      名词：SpringBoot的版本仲裁中心
+    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.4</version>
+    </parent>
+
+</project>
