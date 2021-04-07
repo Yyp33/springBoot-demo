@@ -2,6 +2,7 @@ package com.yyp.springBoot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * springBoot项目启动入口，由于内嵌tomcat所以直接启动此类即可
@@ -22,5 +23,11 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
+    }
+
+    @Bean
+    public Integer idInteger(){
+        Integer id = new Integer(1);
+        return id;
     }
 }
